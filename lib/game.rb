@@ -1,4 +1,4 @@
-require '../lib/player'
+require_relative '../lib/player'
 
 class Game
   WINNING_SET = [

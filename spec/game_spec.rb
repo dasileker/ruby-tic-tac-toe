@@ -1,6 +1,6 @@
 # spec/game_spec.rb
 
-require '../lib/game'
+require_relative '../lib/game'
 
 describe Game do
   let(:game) { Game.new }

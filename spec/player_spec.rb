@@ -1,6 +1,6 @@
 # spec/player_spec.rb
 
-require '../lib/player'
+require_relative '../lib/player'
 
 describe Player do
   let(:player1) { Player.new('', :X) }
