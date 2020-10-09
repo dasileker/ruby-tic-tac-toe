@@ -13,6 +13,15 @@ describe Game do
     it 'should return true if the player wins' do
       expect(game.check_win?([1, 2, 3])).to eq(true)
     end
+    it 'should return false if no one wins (draw)' do
+      expect(game.check_win?([[:X, :O, :O],
+    [:O, :X, :X],
+    [:X, :X, :O]])).not_to eq(true)
+    end
+    it 'should return false if the player lose' do
+      expect(game.check_win?([[:X, :X, :X],
+    [:O, :O, :O]])).not_to eq(true)
+    end
   end
 
   describe '#validate_move' do
