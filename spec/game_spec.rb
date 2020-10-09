@@ -25,11 +25,20 @@ describe Game do
     it 'should returns player name' do
       expect(game.compare_names('zerradi', 'amine')).to eq(false)
     end
+    it 'should return invalide if the players  if its empty' do
+      expect(game.compare_names('', '')).to eq(true)
+    end
   end
 
   describe '#name_check' do
-    it 'should return invalid if the players have the same name' do
+    it 'should return valid if the players name' do
       expect(game.name_check('amine')).to eq(true)
+    end
+    it 'should return true if the players have the same names' do
+      expect(game.compare_names("zerradi", "zerradi")).to eq(true)
+    end
+    it 'should return false if the players have not the same names' do
+      expect(game.compare_names("zerradi", "mario")).to eq(false)
     end
   end
 end
